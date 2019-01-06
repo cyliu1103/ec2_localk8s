@@ -24,7 +24,7 @@
 ```
 - Check Minikube version
 ```sh
-# root@ip-172-31-3-123:~# minikube version
+# minikube version
 minikube version: v0.32.0
 ```
 
@@ -139,7 +139,7 @@ If we access it via kubectl proxy, we can only access it locally. In EC2, it's h
 **WARNING:**
 You should NEVER deploy via Nodeport on product environment
 ```sh
-kubectl -n kube-system edit service kubernetes-dashboard
+# kubectl -n kube-system edit service kubernetes-dashboard
 ```
 You should see "type:ClusterIP" in the end of output. Change it to "type: Nodeport" and save it
 ```sh
